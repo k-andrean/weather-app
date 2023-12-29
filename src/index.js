@@ -17,7 +17,6 @@ async function handleFormSubmit(event) {
     const endTime = performance.now(); // Record the end time
 
     // // Hide the loading spinner
-    loadingSpinner.style.display = 'none';
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data. Status: ${response.status}`);
@@ -29,6 +28,8 @@ async function handleFormSubmit(event) {
     updateUIWithData(data);
 
     // Calculate and display the loading time
+    loadingSpinner.style.display = 'none';
+
     const loadingTime = endTime - startTime;
     displayLoadingTime(loadingTime);
   } catch (error) {

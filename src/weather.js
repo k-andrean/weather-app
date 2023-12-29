@@ -22,7 +22,7 @@ function createIconArray(weatherConditions) {
 
   weatherConditions.forEach((element) => {
     const iconText = element.icon;
-    const imagePath = `../assets/images/icons/${iconText}.png`;
+    const imagePath = `assets/images/icons/${iconText}.png`;
     const image = new Image();
     image.src = imagePath;
     arrayWeatherIcon[iconText] = image;

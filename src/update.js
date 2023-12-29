@@ -1,5 +1,4 @@
 import { loadWeatherData, createIconArray, createConditionImageMap } from './weather.js';
-import Default from '../assets/images/icons/default.png';
 
 // create object mapping to use for updating main html element UI with appropriate weather data
 const weatherConditions = loadWeatherData();
@@ -7,7 +6,8 @@ const iconsArray = createIconArray(weatherConditions);
 const conditionImageMap = createConditionImageMap(weatherConditions, iconsArray);
 
 const defaultImage = new Image();
-defaultImage.src = Default;
+const imagePath = 'assets/images/icons/default.png';
+defaultImage.src = imagePath;
 
 // function for getting right icon to fit current weather forecast
 function getImageUrlForCondition(condition) {
